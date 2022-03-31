@@ -1,0 +1,171 @@
+.card {
+  border-radius: 20px !important;
+  background-color: #4a6572 !important;
+}
+
+.card.card-login {
+  width: 500px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  flex-grow: 1;
+  margin-top: 3em;
+  margin-right: 1em;
+  height: 40em;
+  border-radius: 50px !important;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 50px 20px !important;
+}
+
+.card-header {
+  border-radius: 15px 15px 0px 0px !important;
+  background-color: #3f565f !important;
+}
+
+.card-header-login {
+  border-radius: 40px 40px 20px 20px !important;
+  background-color: #4a6572 !important;
+}
+
+.card-footer {
+  border-radius: 0px 0px 20px 20px !important;
+  background-color: #4a6572 !important;
+}
+
+.card-footer-login {
+  border-radius: 40px 40px 50px 50px !important;
+  background-color: #4a6572 !important;
+}
+
+#nav-link-doc {
+  border-radius: 30px !important;
+  transition: background-color 0.2s;
+}
+
+#nav-link-doc:hover {
+  background-color: #3f565f !important;
+}
+
+#nav-link-contact {
+  border-radius: 30px !important;
+  transition: background-color 0.2s;
+}
+
+#nav-link-contact:hover {
+  background-color: #3f565f !important;
+}
+
+.container-fluid .dropdown {
+  transition: background-color 0.2s;
+  border-radius: 30px !important;
+}
+
+.container-fluid .dropdown:hover {
+  background-color: #3f565f !important;
+}
+
+.dropdown-menu {
+  background-color: #4a6572 !important;
+}
+.dropdown-item {
+  background-color: #4a6572 !important;
+  color: #fff;
+}
+
+.dropdown-item.disabled {
+  background-color: #44575f !important;
+  color: #f9aa33 !important;
+}
+
+.dropdown-item .a {
+  background-color: #4a6572 !important;
+  color: inherit !important;
+}
+.dropdown-item:hover {
+  background-color: #455c66 !important;
+}
+.dropdown-header {
+  background-color: #4a6572 !important;
+}
+.dropdown-divider {
+  background-color: #4a6572 !important;
+}
+
+.form-control {
+  background-color: #526b79 !important;
+  color: #fff !important;
+}
+
+.form-control:disabled {
+  background-color: #3b505a !important;
+  opacity: 0.5;
+}
+
+.form-control::placeholder {
+  background-color: #526b79 !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.InovuaReactDataGrid {
+  fill: #fff !important;
+}
+
+.InovuaReactDataGrid__header {
+  background-color: #344955 !important;
+  color: #fff !important;
+}
+
+.inovua-react-pagination-toolbar {
+  background-color: #344955 !important;
+  color: #fff !important;
+}
+
+.InovuaReactDataGrid__column-layout {
+  background-color: #4a6572 !important;
+}
+
+.InovuaReactDataGrid__row {
+  background-color: #4a6572 !important;
+  color: #fff !important;
+}
+.InovuaReactDataGrid__row-hover-target:hover {
+  background-color: #3d5d6f !important;
+  color: #fff !important;
+}
+
+.InovuaReactDataGrid__row.InovuaReactDataGrid__row--active
+  .InovuaReactDataGrid__cell {
+  background-color: #3b4a53 !important;
+  color: rgb(187, 187, 187) !important;
+}
+
+.InovuaReactDataGrid__row--odd {
+  background-color: #475e68 !important;
+  fill: #fff !important;
+  color: #fff !important;
+}
+
+.inovua-react-toolkit-combo-box__list__item {
+  color: #000;
+}
+
+#panel1a-header {
+  background-color: rgb(52, 73, 85);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+#panel1a-content {
+  background-color: rgb(52, 73, 85);
+}
+
+.MuiAccordionSummary-content.MuiAccordionSummary-contentGutters.css-o4b71y-MuiAccordionSummary-content {
+  justify-content: center;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+}
