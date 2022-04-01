@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import { Card, CardBody, CardHeader, Table } from "reactstrap";
-import CalculeFrette from "../config/CalculeFrette";
+import CalculFrette from "../config/CalculFrette";
 import Frette from "./Frette";
 
 export default function TableFrette(props) {
   const [distances, setDistances] = useState([]);
 
   useEffect(() => {
-    setDistances(CalculeFrette(props.diapason, props.nbFrettes));
+    setDistances(CalculFrette(props.diapason, props.nbFrettes));
   }, [props.diapason, props.nbFrettes]);
 
-  console.log(distances);
   return (
     <Card>
       <CardHeader></CardHeader>
@@ -28,10 +27,11 @@ export default function TableFrette(props) {
             {distances.map((distance, key) => {
               return (
                 <Frette
-                  numero={distance[0]}
-                  distanceFrette={distance[1]}
-                  distanceSilletFrette={distance[2]}
-                  distanceChevaletFrette={distance[3]}
+                  key={key}
+                  numero={distance.numerofrette}
+                  distanceFrette={distance.distanceEntreFrettes}
+                  distanceSilletFrette={distance.distanceSilletFrette}
+                  distanceChevaletFrette={distance.distanceChevaletFrette}
                 />
               );
             })}
