@@ -1,0 +1,26 @@
+version: "3.3"
+
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
+
+services:
+  calculafrette:
+    container_name: calculafrette
+    build:
+      context: .
+      dockerfile: front/docker/Dockerfile.${ENVIRONMENT}
+    env_file:
+      - .env
+    volumes:
+      - "./front:/app"
+      - "/app/node_modules"
+    ports:
+      - ${WEB_PORT}:${VIRTUAL_PORT_CALCULAFRETTE}
+    environment:
+      VIRTUAL_HOST: ${NGINX_HOST_CALCULAFRETTE}
+      LETSENCRYPT_HOST: ${NGINX_HOST_CALCULAFRETTE}
+      VIRTUAL_PORT: ${VIRTUAL_PORT_CALCULAFRETTE}
+    networks:
+      - reverse-proxy

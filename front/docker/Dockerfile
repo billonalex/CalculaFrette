@@ -1,0 +1,26 @@
+# pull official base image
+FROM node:17.3-alpine3.15
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install --global serve
+
+# add app
+COPY . ./
+
+# Version de production :
+#RUN npm run build
+#CMD ["serve", "-s", "build", "-l", ${VIRTUAL_PORT_CALCULAFRETTE}]
+
+# Version de développement :
+# start app
+CMD npm start

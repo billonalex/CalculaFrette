@@ -1,0 +1,32 @@
+# Stage 1
+# Build docker image of react app
+# pull official base image
+FROM node:17.8.0-alpine3.15
+
+# set working directory
+WORKDIR /app
+
+RUN mkdir build
+RUN mkdir front
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install --global serve
+
+COPY package.json ./
+COPY ./front /app/front
+
+WORKDIR /app/front
+
+RUN npm install
+
+WORKDIR /app
+
+RUN npm run build && \
+    cp -r /app/front/build/ /app && \
+    rm -r /app/front
+
+# Version de production :
+CMD serve -s build -l ${VIRTUAL_PORT_CALCULAFRETTE}
